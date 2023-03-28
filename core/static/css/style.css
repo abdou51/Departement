@@ -1,10 +1,3 @@
-/**
-* Template Name: Company - v4.10.0
-* Template URL: https://bootstrapmade.com/company-free-html-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -16,12 +9,12 @@ body {
   max-height: 20px;
 }
 a {
-  color: #1bbd36;
+  color: #1b82bd;
   text-decoration: none;
 }
 
 a:hover {
-  color: #2ae149;
+  color: #2c13bb;
   text-decoration: none;
 }
 
@@ -138,7 +131,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #1bbd36;
+  background: #13a2bb;
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -152,7 +145,7 @@ h6 {
 }
 
 .back-to-top:hover {
-  background: #21df41;
+  background: #2c13bb;
   color: #fff;
 }
 
@@ -193,11 +186,15 @@ h6 {
 }
 
 #header .logo a {
-  color: #3b14d8;
+  color: #000000;
+}
+
+#header .logo:hover{
+  text-shadow: aqua 3px 0;
 }
 
 #header .logo a span {
-  color: #14802a;
+  color: #2c13bb;
 }
 
 #header .logo img {
@@ -225,7 +222,7 @@ h6 {
 }
 
 .header-social-links a:hover {
-  color: #1bbd36;
+  color: #2c13bb;
 }
 
 @media (max-width: 768px) {
@@ -283,7 +280,7 @@ h6 {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
-  color: #1bbd36;
+  color: #2c13bb;
 }
 
 .navbar .dropdown ul {
@@ -299,7 +296,7 @@ h6 {
   background: #fff;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
   transition: 0.3s;
-  border-top: 2px solid #1bbd36;
+  border-top: 2px solid #1b8abd;
 }
 
 .navbar .dropdown ul li {
@@ -321,7 +318,7 @@ h6 {
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
 .navbar .dropdown ul li:hover>a {
-  color: #1bbd36;
+  color: #2c13bb;
 }
 
 .navbar .dropdown:hover>ul {
@@ -420,7 +417,7 @@ h6 {
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover>a {
-  color: #1bbd36;
+  color: #2c13bb;
 }
 
 .navbar-mobile .getstarted,
@@ -502,7 +499,7 @@ h6 {
   background: rgba(4, 4, 4, 0.7);
   padding: 20px;
   color: #fff;
-  border-top: 5px solid #1bbd36;
+  border-top: 5px solid #2c13bb;
 }
 
 #hero .carousel-content h2 {
@@ -526,11 +523,11 @@ h6 {
   color: #fff;
   -webkit-animation-delay: 0.8s;
   animation-delay: 0.8s;
-  border: 2px solid #1bbd36;
+  border: 2px solid #2c13bb;
 }
 
 #hero .btn-get-started:hover {
-  background: #1bbd36;
+  background: #2c13bb;
   color: #fff;
   text-decoration: none;
 }
@@ -599,7 +596,7 @@ h6 {
 
 #hero .carousel-indicators li.active {
   opacity: 1;
-  background: #1bbd36;
+  background: #2c13bb;
 }
 
 @media (min-width: 1024px) {
@@ -666,7 +663,7 @@ section {
   display: block;
   width: 50px;
   height: 3px;
-  background: #1bbd36;
+  background: #2c13bb;
   bottom: 0;
   left: calc(50% - 25px);
 }
@@ -891,7 +888,7 @@ section {
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
   color: #fff;
-  background: #1bbd36;
+  background: #2c13bb;
 }
 
 .portfolio #portfolio-flters li:last-child {
@@ -938,7 +935,7 @@ section {
 
 .portfolio .portfolio-item .portfolio-info .preview-link:hover,
 .portfolio .portfolio-item .portfolio-info .details-link:hover {
-  color: #1bbd36;
+  color: #2c13bb;
 }
 
 .portfolio .portfolio-item .portfolio-info .details-link {
@@ -1258,7 +1255,7 @@ section {
 }
 
 .features .icon-box h3 a:hover {
-  color: #1bbd36;
+  color: #1b1ebd;
 }
 
 /*--------------------------------------------------------------
