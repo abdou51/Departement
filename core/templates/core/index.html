@@ -35,11 +35,7 @@
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
-
     <h1 class="logo me-auto"><a href="{% url 'index' %}"><span> Computer science</span> Departement </a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="" alt="" class="img-fluid"></a> -->
-
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a href="{% url 'index' %}" class="active">Home</a></li>
@@ -50,7 +46,7 @@
               <li><a href="{% url 'planningexams' %}">Planing des examens </a></li>
               <li><a href="Affichage-des-notes.html">Affichage des notes</a></li>
             </ul>
-            
+
           </li>
           <li><a href="Clubs.html">Clubs</a></li>
           <li class="dropdown"><a href="#"><span>Courses</span> <i class="bi bi-chevron-down"></i></a>
@@ -67,7 +63,6 @@
               <li><a href="enseignant.html">Enseignant </a></li>
             </ul>
           </li>
-
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -101,8 +96,8 @@
       </ul>
     </div>
     {%endif%}
-  </header><!-- End Header -->
-  
+  </header>
+  <!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
   <section id="hero">
@@ -194,7 +189,10 @@
     
 
   </main><!-- End #main -->
-  {% include 'core/footer.html' %}
+
+  <!-- ======= Footer ======= -->
+  <!-- End Footer -->
+
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <script src="{% static 'vendor/aos/aos.js' %}"></script>
