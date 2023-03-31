@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Add course</title>
+  <title>AdminPanel</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -72,46 +72,41 @@
           </ul>
         </li>
       </ul>
-    </nav><!-- End Icons Navigation -->
-
-  </header><!-- End Header -->
+    </nav>
+    <!-- End Icons Navigation -->
+  </header>
+  <!-- End Header -->
   <main class="">
-
-    <div class="pagetitle">
-      <h1>Blank Page</h1>
-      <nav>
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item">Pages</li>
-          <li class="breadcrumb-item active">Blank</li>
-        </ol>
-      </nav>
-    </div><!-- End Page Title -->
-
+    <br><br><br>
     <section class="section">
       <div class="row">
-        <!-- <div class="col-lg-6">
-
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Example Card</h5>
-              <p>This is an examle page with no contrnt. You can use it as a starter for your custom pages.</p>
-            </div>
-          </div>
-
-        </div> -->
-
-        <div class="col-lg-12">
-
+        <div class="col-lg-6">
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Courses</h5>
-              
-              <p>This is an examle page with no contrnt. You can use it adfqsfsdqf a starter for your custom pages.</p>
-
+              <div>{% for document in documents %}
+                {% if document.user.name == user.name %}
+                  <h3>{{ document.documenttype }} - {{ document.name }}</h3>
+                  <a href="{% url 'edit_document' document.id %}" class="btn btn-secondary">Edit</a>
+                  </form>
+                  <form method="post" action="{% url 'delete_document' pk=document.pk %}">
+                    {% csrf_token %}
+                    <input type="submit" value="Delete">
+                  </form>
+                {% endif %}
+              {% endfor %}
+              </div>
             </div>
           </div>
-          {% for document in documents %}
+        </div>
+        <div class="col-lg-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Courses</h5>
+              <p>This is an examle page with no contrnt. You can use it adfqsfsdqf a starter for your custom pages.</p>
+            </div>
+          </div>
+          <!-- {% for document in documents %}
           {% if document.user.name == user.name %}
             <h3>{{ document.documenttype }} - {{ document.name }}</h3>
             <a href="{% url 'edit_document' document.id %}" class="btn btn-secondary">Edit</a>
@@ -121,26 +116,23 @@
               <input type="submit" value="Delete">
             </form>
           {% endif %}
-        {% endfor %}
+        {% endfor %} -->
         </div>
       </div>
     </section>
-
-  </main><!-- End #main -->
+  </main>
+  <!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <footer id="" class="footer">
     <div class="copyright">
-      &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
+      &copy; Copyright <strong><span>#</span></strong>. All Rights Reserved
     </div>
     <div class="credits">
-      <!-- All the links in the footer should remain intact. -->
-      <!-- You can delete the links only if you purchased the pro version. -->
-      <!-- Licensing information: https://bootstrapmade.com/license/ -->
-      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      Designed by <a href="">#</a>
     </div>
-  </footer><!-- End Footer -->
+  </footer>
+  <!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
