@@ -1,4 +1,3 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Courses | Company Computer Science Departement</title>
+  <title>Clubs | Computer Science Departement</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -18,17 +17,17 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="{% static 'vendor/animate.css/animate.min.css' %}" rel="stylesheet">
-  <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
-  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
-  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
-  <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
-  <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
-  <link href="{% static 'vendor/remixicon/remixicon.css' %}" rel="stylesheet">
-  <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
 
 </head>
 
@@ -108,41 +107,67 @@
   <main id="main">
     <br>
     <br>
-
-    <!-- ======= Cours TD TP ======= -->
-    <section id="faq" class="faq section-bg">
+  <!-- ======= Our Clients Section ======= -->
+    <section id="clients" class="clients">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>{{course.name}}</h2>
+          <h2>Clubs</h2>
+          <p>#</p>
         </div>
 
-        <div class="faq-list">
-          <br><br><br><br><br>
-          <ul>
-            
-            <li data-aos="fade-up">
-              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">ENSEIGNEMENT<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-              <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
-                {% for document in documents%}
-                {% if document.course.name == course.name%}
-                
+        <div class="row no-gutters clients-wrap clearfix" data-aos="fade-up">
 
-                <p><a href="{{document.document}}"><i class="bi bi-file-pdf"></i>{{document.documenttype}} - {{document.name}}</a></p>
-                
-                {% endif %}
-                {% endfor %}
+          <div class="col-lg-3 col-md-4 col-6">
+            <div class="client-logo">
+              <a href="https://gdsc.community.dev/university-of-batna-2/"><img src="assets/img/clients/Plan de travail 1.png" class="img-fluid" alt=""></a>
+            </div>
+          </div>
 
+          <div class="col-lg-3 col-md-4 col-6">
+            <div class="client-logo">
+              <a href="https://gdsc.community.dev/university-of-batna-2/"><img src="assets/img/clients/Plan de travail 1.png" class="img-fluid" alt=""></a>
+            </div>
+          </div>
 
-              </div>
-            </li>
-          </ul>
+          <div class="col-lg-3 col-md-4 col-6">
+            <div class="client-logo">
+              <a href="https://gdsc.community.dev/university-of-batna-2/"><img src="assets/img/clients/Plan de travail 1.png" class="img-fluid" alt=""></a>            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-6">
+            <div class="client-logo">
+              <a href="https://gdsc.community.dev/university-of-batna-2/"><img src="assets/img/clients/Plan de travail 1.png" class="img-fluid" alt=""></a>            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-6">
+            <div class="client-logo">
+              <a href="https://gdsc.community.dev/university-of-batna-2/"><img src="assets/img/clients/Plan de travail 1.png" class="img-fluid" alt=""></a>            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-6">
+            <div class="client-logo">
+              <a href="https://gdsc.community.dev/university-of-batna-2/"><img src="assets/img/clients/Plan de travail 1.png" class="img-fluid" alt=""></a>            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-6">
+            <div class="client-logo">
+              <a href="https://gdsc.community.dev/university-of-batna-2/"><img src="assets/img/clients/Plan de travail 1.png" class="img-fluid" alt=""></a>            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-6">
+            <div class="client-logo">
+              <a href="https://gdsc.community.dev/university-of-batna-2/"><img src="assets/img/clients/Plan de travail 1.png" class="img-fluid" alt=""></a>            </div>
+          </div>
+
         </div>
 
       </div>
-    </section><!-- End Cours TD TP -->
+    </section>
+    <!-- End Our Clients Section -->
 
-  </main><!-- End #main -->
+  </main>
+  <!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
@@ -152,46 +177,16 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Company</h3>
+            <h3>Computer Science Departement</h3>
             <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
+              53, Route de Constantine, <br>
+              Fésdis, Batna 05078,<br>
+              Algérie. <br><br>
+              <strong>Tél:</strong> +213 33 23 02 66<br>
+              <strong>Fax:</strong> +213 33 23 02 22<br>
+              <strong>Email:</strong> chef-dept.inf@univ-batna2.dz<br>
             </p>
           </div>
-
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Join Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-          </div>
-
         </div>
       </div>
     </div>
@@ -200,18 +195,20 @@
 
       <div class="me-md-auto text-center text-md-start">
         <div class="copyright">
-          &copy; Copyright <strong><span>Company</span></strong>. All Rights Reserved
+          &copy; Copyright <strong><span>ComputerScienceDepartement</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+
+          Designed by <a href="#">#</a>
         </div>
       </div>
       <div class="social-links text-center text-md-right pt-3 pt-md-0">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        <a href="https://www.facebook.com/chefdepartementinformatiquebatna" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <br>
+        <br>
+        <a href="../Login/Login.html" target="_blank"><i class="bi bi-box-arrow-in-right">Login</i></a>
+        
+
       </div>
     </div>
   </footer><!-- End Footer -->
@@ -219,16 +216,15 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="{% static 'vendor/aos/aos.js' %}"></script>
-  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-  <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
-  <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
-  <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
-  <script src="{% static 'vendor/waypoints/noframework.waypoints.js' %}"></script>
-  <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="{% static 'js/main.js' %}"></script>
+  <script src="assets/js/main.js"></script>
 
 </body>
 
