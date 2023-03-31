@@ -36,76 +36,7 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top">
-    <div class="container d-flex align-items-center">
-
-      <h1 class="logo me-auto"><a href="{% url 'index' %}"><span> Computer science</span> Departement </a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="" alt="" class="img-fluid"></a> -->
-
-      <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul>
-          <li><a href="{% url 'index' %}" >Home</a></li>
-          <li><a href="">About</a></li>
-          <li class="dropdown"><a href="#" class="active"><span>Scolarité</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="Emploi-du-temps.html">Emploi du temps</a></li>
-              <li><a href="{% url 'planningexams' %}">Planing des examens </a></li>
-              <li><a href="Affichage-des-notes.html">Affichage des notes</a></li>
-            </ul>
-            
-          </li>
-          <li><a href="About">Clubs</a></li>
-          <li class="dropdown"><a href="#"><span>Courses</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="https://el-mi.univ-batna2.dz/">Moodle</a></li>
-              <li><a href="licence.html">Licence</a></li>
-              <li><a href="master.html">Master</a></li>
-              <li><a href="anciens-examens.html">Ancien examens</a></li>
-            </ul>
-          </li>
-          <li class="dropdown"><a href="#"><span>Staff</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="administration.html">Administration</a></li>
-              <li><a href="enseignant.html">Enseignant </a></li>
-            </ul>
-          </li>
-
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-      <div class="header-social-links d-flex">
-        <a href="https://www.facebook.com/chefdepartementinformatiquebatna" target="_blank" class="facebook"><i class="bu bi-facebook"></i></a>
-      </div>
-      {%if user.is_authenticated%}
-      <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-
-        <img src="" alt="" class="rounded-circle">
-        <span class="d-none d-md-block dropdown-toggle ps-3">{{user.name}}</span>
-      </a>
-      <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-        <li>
-          <a class="dropdown-item d-flex align-items-center" href="">
-            <i class="bi bi-person"></i>
-            <span>AdminPanel</span>
-          </a>
-        </li>
-        <li>
-          <hr class="dropdown-divider">
-        </li>
-          <hr class="dropdown-divider">
-        </li>
-        <li>
-          <a class="dropdown-item d-flex align-items-center" href="#">
-            <i class="bi bi-box-arrow-right"></i>
-            <span>Sign Out</span>
-          </a>
-        </li>
-      </ul>
-    </div>
-    {%endif%}
-  </header><!-- End Header -->
+  {% include 'core/components/header.html' %}
   <br>
   <br>
   <main id="main">
@@ -151,7 +82,48 @@
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <!-- End Footer -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Computer Science Departement</h3>
+            <p>
+              53, Route de Constantine, <br>
+              Fésdis, Batna 05078,<br>
+              Algérie. <br><br>
+              <strong>Tél:</strong> +213 33 23 02 66<br>
+              <strong>Fax:</strong> +213 33 23 02 22<br>
+              <strong>Email:</strong> chef-dept.inf@univ-batna2.dz<br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-md-flex py-4">
+
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; Copyright <strong><span>ComputerScienceDepartement</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+
+          Designed by <a href="#">#</a>
+        </div>
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="https://www.facebook.com/chefdepartementinformatiquebatna" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <br>
+        <br>
+        <a href="{% url 'login' %}"><i class="bi bi-box-arrow-in-right">Login</i></a>
+        
+
+      </div>
+    </div>
+  </footer><!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 

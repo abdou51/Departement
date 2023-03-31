@@ -12,7 +12,13 @@ def index(request):
     
     degrees = Degree.objects.all()
     courses = Course.objects.all()
+    print(request.get_full_path)
     return render(request, 'core/index.html' ,{'degrees': degrees ,'courses': courses })
+
+
+def about(request):
+    print(request.path)
+    return render(request, 'core/about.html')
 
 def index_eng(request):
     

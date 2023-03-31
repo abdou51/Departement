@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path
-from core.views import index,index_eng,login,logout,licence,coursedetails,planningexams,submit_document,profpanel,delete_document,edit_document
+from core.views import index,index_eng,login,logout,licence,coursedetails,planningexams,submit_document,profpanel,delete_document,edit_document,about
 from django.conf import settings
 from django.views.static import serve
 import os
@@ -10,6 +10,7 @@ urlpatterns = [
 
     path('', index , name='index'),
     path('admin/', admin.site.urls),
+    path('about/', about , name='about'),
     path('login/', login , name='login'),
     path('logout', logout , name='logout'),
     path('courses/licence', licence , name='licence'),
