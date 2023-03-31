@@ -37,27 +37,27 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="index.html"><span> Computer science</span> Departement </a></h1>
+    <h1 class="logo me-auto"><a href="{% url 'index' %}"><span> Computer science</span> Departement </a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="" alt="" class="img-fluid"></a> -->
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a href="index.html" >Home</a></li>
+          <li><a href="{% url 'index' %}" class="active">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li class="dropdown"><a href="#" ><span>Scolarité</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="#"><span>Scolarité</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="Emploi-du-temps.html">Emploi du temps</a></li>
-              <li><a href="Planning-des-examens.html">Planing des examens </a></li>
+              <li><a href="{% url 'planningexams' %}">Planing des examens </a></li>
               <li><a href="Affichage-des-notes.html">Affichage des notes</a></li>
             </ul>
             
           </li>
           <li><a href="Clubs.html">Clubs</a></li>
-          <li class="dropdown"><a href="#" class="active"><span>Courses</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="#"><span>Courses</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="https://el-mi.univ-batna2.dz/">Moodle</a></li>
-              <li><a href="licence.html">Licence</a></li>
+              <li><a href="{% url 'licence' %}">Licence</a></li>
               <li><a href="master.html">Master</a></li>
               <li><a href="anciens-examens.html">Ancien examens</a></li>
             </ul>
@@ -77,12 +77,13 @@
         <a href="https://www.facebook.com/chefdepartementinformatiquebatna" target="_blank" class="facebook"><i class="bu bi-facebook"></i></a>
       </div>
       <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-        <img src="" alt="" class="rounded-circle">
-        <span class="d-none d-md-block dropdown-toggle ps-3">K. Anderson</span>
+        {%if user.is_authenticated%}
+        <img src="{{user.image.url}}" alt="Profile" class="rounded-circle">
+        <span class="d-none d-md-block dropdown-toggle ps-3">{{user.name}}</span>
       </a>
       <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
         <li>
-          <a class="dropdown-item d-flex align-items-center" href="">
+          <a class="dropdown-item d-flex align-items-center" href="{% url 'profpanel'%}">
             <i class="bi bi-person"></i>
             <span>AdminPanel</span>
           </a>
@@ -93,13 +94,14 @@
           <hr class="dropdown-divider">
         </li>
         <li>
-          <a class="dropdown-item d-flex align-items-center" href="#">
+          <a class="dropdown-item d-flex align-items-center" href="{% url 'logout' %}">
             <i class="bi bi-box-arrow-right"></i>
             <span>Sign Out</span>
           </a>
         </li>
       </ul>
     </div>
+    {%endif%}
   </header><!-- End Header -->
 
   <main id="main">
