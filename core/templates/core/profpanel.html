@@ -84,15 +84,18 @@
           <div class="card">
             <div class="card-body">
               <h5 class="card-title" style="text-align:center ">Courses</h5>
-              <div>{% for document in documents %}
+              <div class="d-flex">{% for document in documents %}
                 {% if document.user.name == user.name %}
                   <h3>{{ document.documenttype }} - {{ document.name }}</h3>
-                  <a href="{% url 'edit_document' document.id %}" class="btn btn-secondary">Edit</a>
-                  </form>
-                  <form method="post" action="{% url 'delete_document' pk=document.pk %}">
-                    {% csrf_token %}
-                    <input type="submit" value="Delete">
-                  </form>
+                  <div class="d-flex position-absolute end-50">
+                    <form  action="">
+                      <a href="{% url 'edit_document' document.id %}" class="btn btn-primary me-2">Edit</a>
+                    </form>
+                    <form method="post" action="{% url 'delete_document' pk=document.pk %}">
+                      {% csrf_token %}
+                      <input class="btn btn-primary" type="submit" value="Delete">
+                    </form>
+                  </div>
                 {% endif %}
               {% endfor %}
               </div>
