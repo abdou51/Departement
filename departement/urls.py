@@ -9,13 +9,12 @@ from django.conf.urls.static import static
 urlpatterns = [
 
     path('', index , name='index'),
-
     path('admin/', admin.site.urls),
     path('login/', login , name='login'),
     path('logout', logout , name='logout'),
     path('courses/licence', licence , name='licence'),
     path('courses/licence/<str:pk>', coursedetails , name='coursedetails'),
-    path('courses/licence/documents/<str:path>', serve, {'document_root': os.path.join(settings.BASE_DIR, 'documents')}),
+    path('courses/licencedocuments/<str:path>', serve, {'document_root': os.path.join(settings.BASE_DIR, 'documents')}),
     path('scolarite/planningexams/documents/<str:path>', serve, {'document_root': os.path.join(settings.BASE_DIR, 'documents')}),
     path('scolarite/planningexams', planningexams , name='planningexams'),
     path('submit', submit_document , name='submit_document'),
