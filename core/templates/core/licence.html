@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Courses | Company Computer Science Departement</title>
+  <title>Courses | Computer Science Departement</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -40,70 +40,71 @@
     <div class="container d-flex align-items-center">
 
       <h1 class="logo me-auto"><a href="{% url 'index' %}"><span> Computer science</span> Departement </a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="" alt="" class="img-fluid"></a> -->
-  
-        <nav id="navbar" class="navbar order-last order-lg-0">
-          <ul>
-            <li><a href="{% url 'index' %}" class="active">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li class="dropdown"><a href="#"><span>Scolarité</span> <i class="bi bi-chevron-down"></i></a>
-              <ul>
-                <li><a href="Emploi-du-temps.html">Emploi du temps</a></li>
-                <li><a href="{% url 'planningexams' %}">Planing des examens </a></li>
-                <li><a href="Affichage-des-notes.html">Affichage des notes</a></li>
-              </ul>
-              
-            </li>
-            <li><a href="Clubs.html">Clubs</a></li>
-            <li class="dropdown"><a href="#"><span>Courses</span> <i class="bi bi-chevron-down"></i></a>
-              <ul>
-                <li><a href="https://el-mi.univ-batna2.dz/">Moodle</a></li>
-                <li><a href="{% url 'licence' %}">Licence</a></li>
-                <li><a href="master.html">Master</a></li>
-                <li><a href="anciens-examens.html">Ancien examens</a></li>
-              </ul>
-            </li>
-            <li class="dropdown"><a href="#"><span>Staff</span> <i class="bi bi-chevron-down"></i></a>
-              <ul>
-                <li><a href="administration.html">Administration</a></li>
-                <li><a href="enseignant.html">Enseignant </a></li>
-              </ul>
-            </li>
-  
-          </ul>
-          <i class="bi bi-list mobile-nav-toggle"></i>
-        </nav><!-- .navbar -->
-  
-        <div class="header-social-links d-flex">
-          <a href="https://www.facebook.com/chefdepartementinformatiquebatna" target="_blank" class="facebook"><i class="bu bi-facebook"></i></a>
-        </div>
-        <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-          {%if user.is_authenticated%}
-          <img src="{{user.image.url}}" alt="Profile" class="rounded-circle">
-          <span class="d-none d-md-block dropdown-toggle ps-3">{{user.name}}</span>
-        </a>
-        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-          <li>
-            <a class="dropdown-item d-flex align-items-center" href="{% url 'profpanel'%}">
-              <i class="bi bi-person"></i>
-              <span>AdminPanel</span>
-            </a>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="" alt="" class="img-fluid"></a> -->
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a href="{% url 'index' %}" >Home</a></li>
+          <li><a href="">About</a></li>
+          <li class="dropdown"><a href="#" class="active"><span>Scolarité</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="Emploi-du-temps.html">Emploi du temps</a></li>
+              <li><a href="{% url 'planningexams' %}">Planing des examens </a></li>
+              <li><a href="Affichage-des-notes.html">Affichage des notes</a></li>
+            </ul>
+            
           </li>
-          <li>
-            <hr class="dropdown-divider">
+          <li><a href="About">Clubs</a></li>
+          <li class="dropdown"><a href="#"><span>Courses</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="https://el-mi.univ-batna2.dz/">Moodle</a></li>
+              <li><a href="licence.html">Licence</a></li>
+              <li><a href="master.html">Master</a></li>
+              <li><a href="anciens-examens.html">Ancien examens</a></li>
+            </ul>
           </li>
-            <hr class="dropdown-divider">
+          <li class="dropdown"><a href="#"><span>Staff</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="administration.html">Administration</a></li>
+              <li><a href="enseignant.html">Enseignant </a></li>
+            </ul>
           </li>
-          <li>
-            <a class="dropdown-item d-flex align-items-center" href="{% url 'logout' %}">
-              <i class="bi bi-box-arrow-right"></i>
-              <span>Sign Out</span>
-            </a>
-          </li>
+
         </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <div class="header-social-links d-flex">
+        <a href="https://www.facebook.com/chefdepartementinformatiquebatna" target="_blank" class="facebook"><i class="bu bi-facebook"></i></a>
       </div>
-      {%endif%}
+      {%if user.is_authenticated%}
+      <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+
+        <img src="" alt="" class="rounded-circle">
+        <span class="d-none d-md-block dropdown-toggle ps-3">{{user.name}}</span>
+      </a>
+      <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+        <li>
+          <a class="dropdown-item d-flex align-items-center" href="">
+            <i class="bi bi-person"></i>
+            <span>AdminPanel</span>
+          </a>
+        </li>
+        <li>
+          <hr class="dropdown-divider">
+        </li>
+          <hr class="dropdown-divider">
+        </li>
+        <li>
+          <a class="dropdown-item d-flex align-items-center" href="#">
+            <i class="bi bi-box-arrow-right"></i>
+            <span>Sign Out</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    {%endif%}
   </header><!-- End Header -->
 
   <main id="main">
@@ -444,46 +445,16 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Company</h3>
+            <h3>Computer Science Departement</h3>
             <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
+              53, Route de Constantine, <br>
+              Fésdis, Batna 05078,<br>
+              Algérie. <br><br>
+              <strong>Tél:</strong> +213 33 23 02 66<br>
+              <strong>Fax:</strong> +213 33 23 02 22<br>
+              <strong>Email:</strong> chef-dept.inf@univ-batna2.dz<br>
             </p>
           </div>
-
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Join Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-          </div>
-
         </div>
       </div>
     </div>
@@ -492,18 +463,24 @@
 
       <div class="me-md-auto text-center text-md-start">
         <div class="copyright">
-          &copy; Copyright <strong><span>Company</span></strong>. All Rights Reserved
+          &copy; Copyright <strong><span>ComputerScienceDepartement</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+
+          Designed by <a href="#">#</a>
         </div>
       </div>
-      <div class="social-links text-center text-md-right pt-3 pt-md-0">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0 d-flex">
+        <a href="https://www.facebook.com/chefdepartementinformatiquebatna" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <br>
+        <br>
+        {% if not user.is_authenticated %}
+        <a href="{% url 'login' %}"><i class="bi bi-box-arrow-in-right">Login</i></a>
+        {% else %}
+        <a href="{% url 'logout' %}"><i class="bi bi-box-arrow-in-right">Logout</i></a>
+        {% endif %}
+        
+
       </div>
     </div>
   </footer><!-- End Footer -->
