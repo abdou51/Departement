@@ -9,16 +9,14 @@ from django.core.exceptions import PermissionDenied
 
 # Create your views here.
 def index(request):
-    
-    degrees = Degree.objects.all()
-    courses = Course.objects.all()
-    print(request.get_full_path)
-    return render(request, 'core/index.html' ,{'degrees': degrees ,'courses': courses })
+    return render(request, 'core/index.html')
 
 
 def about(request):
-    print(request.path)
     return render(request, 'core/about.html')
+
+def clubs(request):
+    return render(request, 'core/clubs.html')
 
 def index_eng(request):
     
@@ -49,17 +47,13 @@ def login(request):
             
     return render(request, 'core/login.html')
 
-
-
-
-
 def logout(request):
     auth.logout(request)
     return redirect('/')
 
 
 def licence(request):
-    return render(request, 'core/clubs.html')
+    return render(request, 'core/licence.html')
 
 
 def coursedetails(request, pk):

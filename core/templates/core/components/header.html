@@ -12,7 +12,7 @@
               <li><a href="Affichage-des-notes.html">Affichage des notes</a></li>
             </ul>
           </li>
-          <li><a href="About">Clubs</a></li>
+          <li><a class="{% if request.path == 'clubs' %}active{% endif %} "href="{% url 'clubs' %}">Clubs</a></li>
           <li class="dropdown"><a class="{% if 'courses' in request.path %}active{% endif %} " href="#"><span>Courses</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="https://el-mi.univ-batna2.dz/">Moodle</a></li>
