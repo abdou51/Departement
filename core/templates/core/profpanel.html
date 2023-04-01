@@ -87,7 +87,6 @@
               <hr>
               <div class="d-flex flex-column">{% for document in documents %}
                 {% if document.user.name == user.name %}
-                  
                   <div class="d-flex">
                     <h3 class="col-lg-9 me-4">{{ document.documenttype }} - {{ document.name }}</h3>
                     <div class="d-flex position-absolute end-0 me-4" >
@@ -104,7 +103,6 @@
                 <hr>
               {% endfor %}
               </div>
-              
             </div>
           </div>
         </div>
@@ -141,17 +139,6 @@
               </form>            
             </div>
           </div>
-          <!-- {% for document in documents %}
-          {% if document.user.name == user.name %}
-            <h3>{{ document.documenttype }} - {{ document.name }}</h3>
-            <a href="{% url 'edit_document' document.id %}" class="btn btn-secondary">Edit</a>
-            </form>
-            <form method="post" action="{% url 'delete_document' pk=document.pk %}">
-              {% csrf_token %}
-              <input type="submit" value="Delete">
-            </form>
-          {% endif %}
-        {% endfor %} -->
         </div>
       </div>
     </section>
