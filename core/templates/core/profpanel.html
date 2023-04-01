@@ -83,12 +83,12 @@
         <div class="col-lg-6">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title" style="text-align:center ">Courses</h5>
+              <h5 class="card-title text-center">Courses</h5>
               <hr>
               <div class="d-flex">{% for document in documents %}
                 {% if document.user.name == user.name %}
                   <h3>{{ document.documenttype }} - {{ document.name }}</h3>
-                  <div class="d-flex position-absolute end-50">
+                  <div class="d-flex position-absolute end-0 me-3">
                     <form  action="">
                       <a href="{% url 'edit_document' document.id %}" class="btn btn-primary me-2">Edit</a>
                     </form>
