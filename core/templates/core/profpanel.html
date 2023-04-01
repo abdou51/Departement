@@ -84,18 +84,25 @@
           <div class="card">
             <div class="card-body">
               <h5 class="card-title" style="text-align:center ">Courses</h5>
-              <div>{% for document in documents %}
+              <hr>
+              <div class="d-flex">{% for document in documents %}
                 {% if document.user.name == user.name %}
                   <h3>{{ document.documenttype }} - {{ document.name }}</h3>
-                  <a href="{% url 'edit_document' document.id %}" class="btn btn-secondary">Edit</a>
-                  </form>
-                  <form method="post" action="{% url 'delete_document' pk=document.pk %}">
-                    {% csrf_token %}
-                    <input type="submit" value="Delete">
-                  </form>
+                  <div class="d-flex position-absolute end-50">
+                    <form  action="">
+                      <a href="{% url 'edit_document' document.id %}" class="btn btn-primary me-2">Edit</a>
+                    </form>
+                    <form method="post" action="{% url 'delete_document' pk=document.pk %}">
+                      {% csrf_token %}
+                      <input class="btn btn-primary" type="submit" value="Delete">
+                    </form>
+                  </div>
                 {% endif %}
+                <hr>
               {% endfor %}
               </div>
+              <hr>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate necessitatibus ut distinctio doloribus facilis doloremque, possimus repellat ipsam suscipit minima iste odit cum autem aperiam ab quisquam temporibus illum reprehenderit.
             </div>
           </div>
         </div>
@@ -109,23 +116,19 @@
                   <div class="col-sm-6">
                     <label for="{{ form.name.id_for_label }}" class="form-label">Name:</label>
                     {{ form.name }}
-                  </div>
-                  <br>
+                  </div><br>
                   <div class="col-sm-6">
                     <label for="{{ form.documenttype.id_for_label }}" class="" for="specificSizeSelect">Document Type:</label>
                     {{ form.documenttype }}
-                  </div>
-                  <br>
+                  </div><br>
                   <div class="col-sm-6">
                     <label for="{{ form.course.id_for_label }}" class="form-label">Course:</label>
                     {{ form.course }}
-                  </div>
-                  <br>
+                  </div><br>
                   <div class="col-sm-6">
                     <label for="{{ form.document.id_for_label }}" class="form-label">Document:</label>
                     {{ form.document }}
-                  </div>
-                  <br>
+                  </div><br>
                 </div>
                 {% if messages %}
                 {% for message in messages %}
