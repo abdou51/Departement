@@ -118,6 +118,8 @@ def delete_document(request, pk):
     if request.method == 'POST':
         document.delete()
         return redirect('profpanel')
+        
+    
     return render(request, 'core/profpanel.html', {'document': document})
 
 @login_required
