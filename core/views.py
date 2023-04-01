@@ -54,7 +54,7 @@ def logout(request):
 
 
 def licence(request):
-    return render(request, 'core/licence.html')
+    return render(request, 'core/master.html')
 
 
 def coursedetails(request, pk):
