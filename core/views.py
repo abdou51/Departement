@@ -5,6 +5,7 @@ from .forms import DocumentForm
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseForbidden
 from django.core.exceptions import PermissionDenied
+from django.db import transaction
 
 
 # Create your views here.
@@ -106,6 +107,7 @@ def profpanel(request):
 
 
 @login_required
+@transaction.atomic
 def delete_document(request, pk):
     document = get_object_or_404(Document, pk=pk)
     

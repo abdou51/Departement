@@ -83,33 +83,35 @@
         <div class="col-lg-6">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title" style="text-align:center ">Courses</h5>
+              <h5 class="card-title text-center">Courses</h5>
               <hr>
-              <div class="d-flex">{% for document in documents %}
+              <div class="d-flex flex-column">{% for document in documents %}
                 {% if document.user.name == user.name %}
-                  <h3>{{ document.documenttype }} - {{ document.name }}</h3>
-                  <div class="d-flex position-absolute end-50">
-                    <form  action="">
-                      <a href="{% url 'edit_document' document.id %}" class="btn btn-primary me-2">Edit</a>
-                    </form>
-                    <form method="post" action="{% url 'delete_document' pk=document.pk %}">
-                      {% csrf_token %}
-                      <input class="btn btn-primary" type="submit" value="Delete">
-                    </form>
+                  
+                  <div class="d-flex">
+                    <h3 class="col-lg-9 me-4">{{ document.documenttype }} - {{ document.name }}</h3>
+                    <div class="d-flex position-absolute end-0 me-4" >
+                      <form  action="">
+                        <a href="{% url 'edit_document' document.id %}" class="btn btn-primary me-2">Edit</a>
+                      </form>
+                      <form method="post" action="{% url 'delete_document' pk=document.pk %}">
+                        {% csrf_token %}
+                        <input class="btn btn-primary" type="submit" value="Delete">
+                      </form>
+                    </div>
                   </div>
                 {% endif %}
                 <hr>
               {% endfor %}
               </div>
-              <hr>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate necessitatibus ut distinctio doloribus facilis doloremque, possimus repellat ipsam suscipit minima iste odit cum autem aperiam ab quisquam temporibus illum reprehenderit.
+              
             </div>
           </div>
         </div>
         <div class="col-lg-6">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title" style="text-align:center ">Add New Course</h5>
+              <h5 class="card-title text-center">Add New Course</h5>
               <form method="post" enctype="multipart/form-data">
                 {% csrf_token %}
                 <div class="form-group">
