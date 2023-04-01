@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path
-from core.views import index,index_eng,login,logout,licence,coursedetails,planningexams,submit_document,profpanel,delete_document,edit_document,about,clubs
+from core.views import index,index_eng,login,logout,licence,coursedetails,planningexams,submit_document,profpanel,delete_document,edit_document,about,clubs,planning
 from django.conf import settings
 from django.views.static import serve
 import os
@@ -19,6 +19,7 @@ urlpatterns = [
     path('courses/licencedocuments/<str:path>', serve, {'document_root': os.path.join(settings.BASE_DIR, 'documents')}),
     path('scolarite/planningexams/documents/<str:path>', serve, {'document_root': os.path.join(settings.BASE_DIR, 'documents')}),
     path('scolarite/planningexams', planningexams , name='planningexams'),
+    path('scolarite/planning', planning , name='planning'),
     path('submit', submit_document , name='submit_document'),
     path('profpanel/', profpanel , name='profpanel'),
     path('delete_document/<int:pk>', delete_document, name='delete_document'),

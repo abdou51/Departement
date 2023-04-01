@@ -185,3 +185,14 @@ class PlanningExam(models.Model):
 
     def __str__(self):
         return f"{self.degree} - {self.Speciality.name}"
+    
+class Planning(models.Model):
+    document = models.ImageField(upload_to='images')
+    degree = models.ForeignKey(Degree, on_delete=models.CASCADE)
+    Speciality = models.ForeignKey(Speciality, on_delete=models.CASCADE)
+
+    class Meta:
+        unique_together = ('Speciality',)
+
+    def __str__(self):
+        return f"{self.degree} - {self.Speciality.name}"

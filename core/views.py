@@ -1,6 +1,6 @@
 from django.shortcuts import render , get_object_or_404 ,redirect
 from django.contrib import auth , messages
-from .models import Degree,Course,Document,PlanningExam,User
+from .models import Degree,Course,Document,PlanningExam,User,Planning
 from .forms import DocumentForm
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseForbidden
@@ -66,6 +66,13 @@ def planningexams(request):
 
     
     return render(request, 'core/planningexams.html' ,{'planningexams': planningexams})
+
+
+def planning(request):
+    plannings = Planning.objects.all()
+
+    
+    return render(request, 'core/planning.html' ,{'plannings': plannings})
 
 
 

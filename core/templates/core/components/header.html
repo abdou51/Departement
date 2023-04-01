@@ -7,7 +7,7 @@
           <li><a class="{% if request.path == '/about/' %}active{% endif %} "href="{% url 'about' %}">About</a></li>
           <li class="dropdown"><a class="{% if 'scolarite' in request.path %}active{% endif %} " href="#"><span>Scolarité</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="Emploi-du-temps.html">Emploi du temps</a></li>
+              <li><a href="{% url 'planning' %}">Emploi du temps</a></li>
               <li><a href="{% url 'planningexams' %}">Planing des examens </a></li>
               <li><a href="Affichage-des-notes.html">Affichage des notes</a></li>
             </ul>

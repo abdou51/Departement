@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 from .models import User,Degree
-from .models import Course,Document,Semester,Speciality,DocumentType,PlanningExam
+from .models import Course,Document,Semester,Speciality,DocumentType,PlanningExam,Planning
 admin.site.register(User)
 
 admin.site.register(Speciality)
@@ -18,3 +18,4 @@ admin.site.register(Degree)
 admin.site.register(Semester)
 
 admin.site.register(PlanningExam)
+admin.site.register(Planning)
