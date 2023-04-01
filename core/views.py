@@ -95,9 +95,6 @@ def submit_document(request):
 
 
 
-
-
-
 @login_required
 def profpanel(request):
     user = request.user
@@ -108,6 +105,7 @@ def profpanel(request):
 
 @login_required
 @transaction.atomic
+
 def delete_document(request, pk):
     document = get_object_or_404(Document, pk=pk)
     
