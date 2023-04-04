@@ -45,6 +45,7 @@ def login(request):
             return redirect(redirect_to)
         else:
             messages.error(request, 'Invalid username or password.')
+            return redirect('/login')
             
     return render(request, 'core/login.html')
 
