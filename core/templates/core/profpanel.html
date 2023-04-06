@@ -89,7 +89,7 @@
                 {% if document.user.name == user.name %}
                   <div class="d-flex">
                     <h3 class="col-lg-9 me-4">{{ document.documenttype }} - {{ document.name }}</h3>
-                    <div class="d-flex position-absolute end-0 me-4" >
+                    <div class="d-flex end-0 me-4 align-items-center" >
                       <form  action="">
                         <a href="{% url 'edit_document' document.id %}" class="btn btn-primary me-2">Edit</a>
                       </form>
