@@ -1,0 +1,31 @@
+/* important */
+.ftco-section {
+  padding: 7em 0; }
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    text-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important; }}
+
+body {
+  line-height: 1.8;}
+  
+.table-wrap {
+  overflow-x: scroll; }
+
+.table thead.thead-primary {
+  background: #402558; }
+
+.table thead th {
+  border: none;
+  padding: 20px 30px;
+  font-size: 14px;
+  color: #fff; }
+
+.table tbody th, .table tbody td {
+  border: none;
+  padding: 20px 30px;
+  border-bottom: 3px solid #f8f9fd;}

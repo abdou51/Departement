@@ -74,7 +74,7 @@ class Semester(models.Model):
 
     
 class Speciality(models.Model):
-    name = models.CharField(max_length=255,unique=True)
+    name = models.CharField(max_length=255)
     degree = models.ForeignKey(Degree, on_delete=models.CASCADE)
     
     def __str__(self):

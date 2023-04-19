@@ -27,6 +27,83 @@ h6 {
   font-family: "Roboto", sans-serif;
 }
 
+/*  stats */
+.counter {
+  font-family: 'Oswald', sans-serif;
+  --color-primary: darksalmon;
+  background-image: url(../img/groupe-divers-diplomes-lancant-bonnets-dans-ciel.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: #fff;
+  z-index: 1;
+}
+
+.counter::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(13, 13, 14, 0.7);
+  z-index: -1;
+}
+
+.counter .fa {
+  font-size: 80px !important;
+}
+
+.counter h2 {
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.8;
+  color: #fff;
+  z-index: 2;
+  font-size: 2rem;
+}
+
+.counter p {
+  color: #fff;
+  text-align: center;
+}
+
+.counter .counter-wrapper {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.counter .counter-wrapper>div {
+  margin: 1rem 0;
+}
+
+.counter .counter-wrapper .number {
+  font-weight: bold;
+  font-size: 2.5rem;
+  position: relative;
+}
+
+.counter .counter-wrapper .number::after {
+  position: absolute;
+  content: '';
+  left: 50%;
+  top: 100%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 1rem;
+  height: 3px;
+  background-color: #fff;
+}
+
+.counter .counter-wrapper .text {
+  text-transform: uppercase;
+  margin-top: .5rem;
+  letter-spacing: 1px;
+  color: #f982a2;
+}
+
+
+
 /* Dropdown menus */
 .dropdown-menu {
   border-radius: 4px;
