@@ -14,7 +14,7 @@ def index(request):
 
 
 def about(request):
-    return render(request, 'core/responsable_spec.html')
+    return render(request, 'core/about.html')
 
 def clubs(request):
     return render(request, 'core/clubs.html')

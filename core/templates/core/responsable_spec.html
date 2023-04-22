@@ -26,87 +26,171 @@
 			<!-- Template Main CSS File -->
 			<link href="{% static 'css/style.css' %}" rel="stylesheet">
 			<link href="{% static 'table/style.css' %}" rel="stylesheet">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 			</head>
 			<body>
 				<!-- ======= Header ======= -->
 				{% include 'core/components/header.html' %}
 				<!-- End Header -->
-				<section class="ftco-section">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-12">
-								<div class="table-wrap">
-									<table class="table">
-									<thead class="thead-primary">
-										<tr>
-											<th></th>
-											<th><b>Spécialité</b></th>
-											<th><b>Enseignant</b></th>
-											<th><b>Email</b></th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<th scope="row">1</th>
-											<td>Licence Informatique</td>
-											<td>BILAMI Azeddine</td>
-											<td><a href="mailto:az.bilami@univ-batana2.dz">az.bilami@univ-batana2.dz</a></td>
-										</tr>
-										<tr>
-											<th scope="row">2</th>
-											<td>Licence Systèmes Informatiques (SI) </td>
-											<td>DJAROUDIB Khamsa</td>
-											<td><a href="mailto:k.djaroudib@univ-batna2.dz">k.djaroudib@univ-batna2.dz</a></td>
-										</tr>
-										<tr>
-											<th scope="row">3</th>
-											<td>Licence Ingénierie des Systèmes d'Information et Logiciel (ISIL)</td>
-											<td>BENHARZALLAH Saber</td>
-											<td><a href="mailto:s.benharzallah@univ-batna2.dz">s.benharzallah@univ-batna2.dz</a></td>
-										</tr>
-										<tr>
-											<th scope="row">4</th>
-											<td>Master Ingénierie des Systèmes d’Information Distribués et Sécurité (ISIDS)</td>
-											<td></td>
-											<td><a href="mailto:"></a></td>
-										</tr>
-										<tr>
-											<th scope="row">5</th>
-											<td>Master Ingénierie des Systèmes Informatiques (ISI)</td>
-											<td>HEDJAZI Djalal</td>
-											<td><a href="mailto:d.hedjazi@univ-batna2.dz">d.hedjazi@univ-batna2.dz</a></td>
-										</tr>
-										<tr>
-											<th scope="row">6</th>
-											<td>Master Intelligence Artificielle et Multimédia (IAM)</td>
-											<td>BEHLOUL Ali</td>
-											<td><a href="mailto:a.behloul@univ-batna2.dz">a.behloul@univ-batna2.dz</a></td>
-										</tr>
-										<tr>
-											<th scope="row">7</th>
-											<td>Master Cryptographie et Sécurité (CS)</td>
-											<td>BETTA Mohamed</td>
-											<td><a href="mailto:m.betta@univ-batna2.dz">m.betta@univ-batna2.dz</a></td>
-										</tr>
-										<tr>
-											<th scope="row">8</th>
-											<td>Master Réseaux et Systèmes Distribues (RSD)</td>
-											<td>ABDESSEMED Mohamed Ridha</td>
-											<td><a href="mailto:mr.abdessemed@univ-batna2.dz">mr.abdessemed@univ-batna2.dz</a></td>
-										</tr>
-									</tbody>
-									</table>
+				<div class="container ftco-section">
+					<section class="section-title " data-aos="fade-up">
+						<h2>Our Specialties</h2>
+						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa cupiditate vitae officia quam consectetur totam facere suscipit non excepturi, tenetur expedita repudiandae? Ut iusto illum, fugit asperiores cupiditate ipsum fugiat?</p>
+					</section>
+
+					<div data-aos="fade-up">
+
+						<div class="row justify-content-center">
+							<div class=" col-lg-4 col-md-5 col-12 mt-4 pt-2">
+								<div class="card border-0 bg-light rounded shadow">
+									<div class="card-body p-4">
+										<span class="badge rounded-pill bg-primary float-md-end mb-3 mb-sm-0">Licence</span>
+										<h5>Licence Informatique</h5>
+										<div class="mt-3">
+											<span class="text-muted d-block pt-4"><i class="fa-regular fa-user " aria-hidden="true"></i> <a href="#" target="_blank" class="text-muted">BILAMI Azeddine</a></span>
+											<span class="text-muted d-block"><i class="fa-regular fa-envelope" aria-hidden="true"></i><a href="mailto:az.bilami@univ-batana2.dz" class="text-muted"> az.bilami@univ-batana2.dz</a></span>
+										</div>
+										
+										<div class="mt-3">
+											<a href="" class="btn btn-primary">View Details</a>
+										</div>
+									</div>
+								</div>
+							</div><!--end col-->
+						
+							<div class="col-lg-4 col-md-5 col-12 mt-4 pt-2">
+								<div class="card border-0 bg-light rounded shadow">
+									<div class="card-body p-4">
+										<span class="badge rounded-pill bg-primary float-md-end mb-3 mb-sm-0">Licence</span>
+										<h5>Systèmes Informatiques (SI)</h5>
+										<div class="mt-3">
+											<span class="text-muted d-block"><i class="fa-regular fa-user " aria-hidden="true"></i> <a href="#" target="_blank" class="text-muted">DJAROUDIB Khamsa</a></span>
+											<span class="text-muted d-block"><i class="fa-regular fa-envelope" aria-hidden="true"></i> <a href="mailto:k.djaroudib@univ-batna2.dz" class="text-muted"> k.djaroudib@univ-batna2.dz</a></span>
+										</div>
+										
+										<div class="mt-3">
+											<a href="" class="btn btn-primary">View Details</a>
+										</div>
+									</div>
+								</div>
+							</div><!--end col-->
+						
+							<div class="col-lg-4 col-md-5 col-12 mt-4 pt-2">
+								<div class="card border-0 bg-light rounded shadow">
+									<div class="card-body p-4">
+										<span class="badge rounded-pill bg-primary float-md-end mb-3 mb-sm-0">Licence</span>
+										<h5>Ingénierie des Systèmes d'Information et Logiciel (ISIL)</h5>
+										<div class="mt-3">
+											<span class="text-muted d-block"><i class="fa-regular fa-user " aria-hidden="true"></i> <a href="#" target="_blank" class="text-muted">BENHARZALLAH Saber</a></span>
+											<span class="text-muted d-block"><i class="fa-regular fa-envelope" aria-hidden="true"></i> <a href="mailto:s.benharzallah@univ-batna2.dz" class="text-muted"> s.benharzallah@univ-batna2.dz</a></span>
+										</div>
+										
+										<div class="mt-3">
+											<a href="" class="btn btn-primary">View Details</a>
+										</div>
+									</div>
+								</div>
+							</div><!--end col-->
+						</div>
+						<div class="row justify-content-center">
+							<div class="col-lg-4 col-md-5 col-12 mt-4 pt-2">
+								<div class="card border-0 bg-light rounded shadow">
+									<div class="card-body p-4">
+										<span class="badge rounded-pill bg-primary float-md-end mb-3 mb-sm-0">Master</span>
+										<h5>Ingénierie des Systèmes Informatiques (ISI)</h5>
+										<div class="mt-3">
+											<span class="text-muted d-block"><i class="fa-regular fa-user " aria-hidden="true"></i> <a href="#" target="_blank" class="text-muted">HEDJAZI Djalal</a></span>
+											<span class="text-muted d-block"><i class="fa-regular fa-envelope" aria-hidden="true"></i> <a href="mailto:d.hedjazi@univ-batna2.dz" class="text-muted">d.hedjazi@univ-batna2.dz</a></span>
+										</div>
+										
+										<div class="mt-3">
+											<a href="" class="btn btn-primary">View Details</a>
+										</div>
+									</div>
+								</div>
+							</div><!--end col-->
+							
+							<div class="col-lg-4 col-md-5 col-12 mt-4 pt-2">
+								<div class="card border-0 bg-light rounded shadow">
+									<div class="card-body p-4">
+										<span class="badge rounded-pill bg-primary float-md-end mb-3 mb-sm-0">Master</span>
+										<h5>Intelligence Artificielle et Multimédia (IAM)</h5>
+										<div class="mt-3">
+											<span class="text-muted d-block"><i class="fa-regular fa-user" aria-hidden="true"></i> <a href="#" target="_blank" class="text-muted">BEHLOUL Ali</a></span>
+											<span class="text-muted d-block"><i class="fa-regular fa-envelope" aria-hidden="true"></i> <a href="mailto:a.behloul@univ-batna2.dz" class="text-muted"> a.behloul@univ-batna2.dz</a></span>
+										</div>
+										
+										<div class="mt-3">
+											<a href="" class="btn btn-primary">View Details</a>
+										</div>
+									</div>
+								</div>
+							</div><!--end col-->
+							
+							<div class="col-lg-4 col-md-5 col-12 mt-4 pt-2">
+								<div class="card border-0 bg-light rounded shadow">
+									<div class="card-body p-4">
+										<span class="badge rounded-pill bg-primary float-md-end mb-3 mb-sm-0">Master</span>
+										<h5>Cryptographie et Sécurité (CS)</h5>
+										<div class="mt-3">
+											<span class="text-muted d-block"><i class="fa-regular fa-user " aria-hidden="true"></i> <a href="#" target="_blank" class="text-muted">BETTA Mohamed</a></span>
+											<span class="text-muted d-block"><i class="fa-regular fa-envelope" aria-hidden="true"></i> <a href="mailto:m.betta@univ-batna2.dz" class="text-muted"> m.betta@univ-batna2.dz</a></span>
+										</div>
+										
+										<div class="mt-3">
+											<a href="" class="btn btn-primary">View Details</a>
+										</div>
+									</div>
+								</div>
+							</div><!--end col-->
+						</div>
+						<div class="row justify-content-center">
+							<div class="col-lg-4 col-md-5 col-12 mt-4 pt-2">
+								<div class="card border-0 bg-light rounded shadow">
+									<div class="card-body p-4">
+										<span class="badge rounded-pill bg-primary float-md-end mb-3 mb-sm-0">Master</span>
+										<h5>Réseaux et Systèmes Distribues (RSD)</h5>
+										<div class="mt-3">
+											<span class="text-muted d-block pt-4"><i class="fa-regular fa-user " aria-hidden="true"></i> <a href="#" target="_blank" class="text-muted">ABDESSEMED Mohamed Ridha</a></span>
+											<span class="text-muted d-block"><i class="fa-regular fa-envelope" aria-hidden="true"></i> <a href="mailto:mr.abdessemed@univ-batna2.dz" class="text-muted"> mr.abdessemed@univ-batna2.dz</a></span>
+										</div>
+										
+										<div class="mt-3">
+											<a href="" class="btn btn-primary">View Details</a>
+										</div>
+									</div>
+								</div>
+							</div><!--end col-->
+
+							<div class="col-lg-4 col-md-5 col-12 mt-4 pt-2">
+								<div class="card border-0 bg-light rounded shadow">
+									<div class="card-body p-4">
+										<span class="badge rounded-pill bg-primary float-md-end mb-3 mb-sm-0">Master</span>
+										<h5>Ingénierie des Systèmes d’Information Distribués et Sécurité (ISIDS)</h5>
+										<div class="mt-3">
+											<span class="text-muted d-block"><i class="fa-regular fa-user " aria-hidden="true"></i> <a href="#" target="_blank" class="text-muted"></a></span>
+											<span class="text-muted d-block"><i class="fa-regular fa-envelope" aria-hidden="true"></i> <a href="mailto:" class="text-muted"> </a></span>
+										</div>
+										
+										<div class="mt-3">
+											<a href="" class="btn btn-primary">View Details</a>
+										</div>
+									</div>
 								</div>
 							</div>
-						</div>
+						</div><!--end col-->
 					</div>
-				</section>
+					<!--end -->
+				</div>
+			<br><br>
 			<!-- ======= footer ======= -->
 			{% include 'core/components/footer.html' %}
 			<!-- End footer -->
 		
 			<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+
 		
 			<script src="{% static 'vendor/aos/aos.js' %}"></script>
 			<script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
