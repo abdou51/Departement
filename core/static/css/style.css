@@ -1,7 +1,7 @@
 /* important */
 .ftco-section {
   padding: 7em 0; }
-
+/* important */
 .row {
   margin-right: 0px;
 }
@@ -1026,7 +1026,7 @@ section {
 .clients .client-logo img {
   transition: all 0.3s ease-in-out;
   height: 36px;
-  filter: grayscale(100%);
+  /* filter: grayscale(100%); */
 }
 
 .clients .client-logo:hover img {
